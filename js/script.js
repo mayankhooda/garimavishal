@@ -6,11 +6,38 @@
       $('.sakura-falling').sakura();
 })(jQuery);
 
+
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioContext = new AudioContext();
+const audioElement = document.querySelector('audio');
+const track = audioContext.createMediaElementSource(audioElement);
+track.connect(audioContext.destination);
+
 console.log("chalega");
 $(document).on('click', function(){
-    document.getElementById("my_audio").play();
-    $("div.cover").fadeOut(3000);
+    console.log('playing');
+    if (audioContext.state === "suspended") {
+        console.log('resume playing');
+        audioContext.resume();
+    }
+    audioElement.play();
+    $("div.cover").fadeOut(3000, function() {
+        console.log("ho gya stop");
+    });
 });
+
+$(document).on('visibilitychange', function() {
+    if (document.visibilityState === "visible") {
+        if (audioContext.state === "suspended") {
+            console.log('resume playing');
+            audioContext.resume();
+        }
+        audioElement.play();
+    } else {
+        console.log('pause playing');
+        audioElement.pause();
+    }
+})
 
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 12, 2021 20:00:00").getTime();
