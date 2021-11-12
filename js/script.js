@@ -6,8 +6,17 @@
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
 const audioElement = document.querySelector('audio');
+audioElement.currentTime=22;
+
+gain = audioContext.createGain();
+ZERO = 0.000001;
+gain.connect(audioContext.destination);
+gain.gain.setValueAtTime(ZERO, 0);
+gain.gain.linearRampToValueAtTime(1.00, 2.5);
+
 const track = audioContext.createMediaElementSource(audioElement);
-track.connect(audioContext.destination);
+track.connect(gain);
+gain.connect(audioContext.destination);
 
 console.log("chalega");
 $(document).on('click', function(){
