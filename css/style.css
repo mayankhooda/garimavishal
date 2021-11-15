@@ -474,6 +474,15 @@ h3.last-name-bottom {
 	font-size: 13px;
 }
 
+p.sangeet-details {
+	color: #564861;
+	margin: 0px 0 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 13px;
+	text-align: center;
+}
+
 .wrap {
 	display: -webkit-flex;
 	display: flex;
