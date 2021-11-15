@@ -633,7 +633,7 @@ body {
 	color: #564861;
 	text-align: center;
 	font-size: 16px;
-	margin: 24px;
+	margin: 20px;
 }
 
 .phone {
@@ -675,4 +675,112 @@ a {
 	display: flex;
 	font-size: 12px;
 	letter-spacing: 0pt;
+}
+
+.separator {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  border: 0;
+}
+
+.separator--line {
+  border: 0;
+  border-bottom: 8px solid #674ea7;
+  width: 0;
+  -webkit-animation: separator-width 1s ease-out forwards;
+          animation: separator-width 1s ease-out forwards;
+}
+
+@-webkit-keyframes separator-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes separator-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.separator--dots {
+  overflow: visible;
+  border: 0;
+  content: "";
+  background-color: #674ea7;
+  display: block;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  position: relative;
+}
+.separator--dots:before {
+  content: "";
+  background-color: #674ea7;
+  display: block;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  position: absolute;
+  left: -32px;
+  -webkit-animation: dot-move-left 3s ease-out forwards;
+          animation: dot-move-left 3s ease-out forwards;
+}
+.separator--dots:after {
+  content: "";
+  background-color: #674ea7;
+  display: block;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  position: absolute;
+  left: 32px;
+  -webkit-animation: dot-move-right 3s ease-out forwards;
+          animation: dot-move-right 3s ease-out forwards;
+}
+
+@-webkit-keyframes dot-move-right {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 32px;
+  }
+}
+
+@keyframes dot-move-right {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 32px;
+  }
+}
+@-webkit-keyframes dot-move-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -32px;
+  }
+}
+@keyframes dot-move-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -32px;
+  }
+}
+.separator--dotter {
+  border: 0;
+  border-bottom: 8px dotted #674ea7;
+  width: 0;
+  -webkit-animation: separator-width 1.5s ease-out forwards;
+          animation: separator-width 1.5s ease-out forwards;
 }
