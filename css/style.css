@@ -365,6 +365,7 @@ img {
 	}
 	.envelope img {
 		max-width: 60%;
+		margin-top: 200px;
 	}
 }
 
@@ -559,19 +560,18 @@ body {
 }
 
 .envelope {
-	margin-top: 20%;
-	display: grid;
-	grid-template-columns: 1fr;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 }
 
 .envelope img{
+	margin-top: 20%;
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
-
 	max-height: 600px;
 }
 
@@ -675,6 +675,7 @@ a {
 	display: flex;
 	font-size: 12px;
 	letter-spacing: 0pt;
+	justify-content: center;
 }
 
 .separator {
@@ -784,4 +785,8 @@ a {
   width: 0;
   -webkit-animation: separator-width 1.5s ease-out forwards;
           animation: separator-width 1.5s ease-out forwards;
+}
+
+#hide-main {
+	display: none;
 }

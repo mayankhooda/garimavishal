@@ -20,6 +20,7 @@ gain.connect(audioContext.destination);
 
 console.log("chalega");
 $(document).on('click', function(){
+    document.getElementById("hide-main").style.display = "block";
     console.log('playing');
     if (audioContext.state === "suspended") {
         console.log('resume playing');
