@@ -476,7 +476,7 @@ h3.last-name-bottom {
 
 p.sangeet-details {
 	color: #564861;
-	margin: 0px 0 20px;
+	margin: 0px 0 30px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 13px;
@@ -633,7 +633,7 @@ body {
 	color: #564861;
 	text-align: center;
 	font-size: 16px;
-	margin: 20px;
+	margin: 50px 20px 20px 20px;
 }
 
 .phone {
@@ -678,8 +678,8 @@ a {
 }
 
 .separator {
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border: 0;
 }
 
@@ -728,8 +728,8 @@ a {
   border-radius: 50%;
   position: absolute;
   left: -32px;
-  -webkit-animation: dot-move-left 3s ease-out forwards;
-          animation: dot-move-left 3s ease-out forwards;
+  -webkit-animation: dot-move-left 4s ease-out forwards;
+          animation: dot-move-left 4s ease-out forwards;
 }
 .separator--dots:after {
   content: "";
@@ -740,8 +740,9 @@ a {
   border-radius: 50%;
   position: absolute;
   left: 32px;
-  -webkit-animation: dot-move-right 3s ease-out forwards;
-          animation: dot-move-right 3s ease-out forwards;
+	animation-delay: 6s;
+  -webkit-animation: dot-move-right 4s ease-out forwards;
+          animation: dot-move-right 4s ease-out forwards;
 }
 
 @-webkit-keyframes dot-move-right {
